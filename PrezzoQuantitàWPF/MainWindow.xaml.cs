@@ -32,7 +32,7 @@ namespace PrezzoQuantitàWPF
                 double p = double.Parse(txtPrezzo.Text);
                 lblStampa.Content = p;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 lblStampa.Content = ex.Message;
             }
