@@ -27,15 +27,62 @@ namespace PrezzoQuantitàWPF
 
         private void btnMostra_Click(object sender, RoutedEventArgs e)
         {
-            try
+
+
+
+            if (txtPrezzo.Text != "" && txtQuantità.Text != "")//txt.Prezzo.Lenght>0
+                try
+                {
+                    double sconto;
+
+                    if (txtSconto.Text != "")
+                    {
+                        sconto = double.Parse(txtSconto.Text);
+
+                    }
+                    else
+                    {
+                        sconto = 0;
+                    }
+                    if (sconto > 100 || sconto < 0)
+                    {
+                        MessageBox.Show("inserito un valore fuori dal range 0-100", "attenzione", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        double totale;
+                        double p = double.Parse(txtPrezzo.Text);
+                        double q = double.Parse(txtQuantità.Text);
+
+
+
+                        double valoreSconto;
+                        if (q >= 20)
+                        {
+                            totale = p * q;
+                            valoreSconto = sconto * totale / 100;
+                            totale = totale - valoreSconto;
+
+                        }
+                        else
+                        {
+                            totale = p * q;
+                        }
+
+                        lblStampa.Content = totale;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    lblStampa.Content = ex.Message;
+                }
+            else
             {
-                double p = double.Parse(txtPrezzo.Text);
-                lblStampa.Content = p;
+                MessageBox.Show("inserire tutti  dati richiesti", "attenzione", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
-            {
-                lblStampa.Content = ex.Message;
-            }
+
+
         }
     }
 }
