@@ -6,16 +6,22 @@
         xmlns:local="clr-namespace:PrezzoQuantitàWPF"
         mc:Ignorable="d"
         Title="Prezzo e quantità" Height="450" Width="800">
-    <Grid>
-        <Label Content="Prezzo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,56,0,0"/>
-        <TextBox x:Name="txtPrezzo" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="80,82,0,0"/>
-        <Button x:Name="btnMostra" Content="Calcola" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="316,121,0,0" Click="btnMostra_Click"/>
-        <Label x:Name="lblStampa" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="361,146,0,0" Width="241"/>
-        <Label x:Name="lblQuantità" Content="Quantità" HorizontalAlignment="Left" Margin="319,56,0,0" VerticalAlignment="Top" Width="72"/>
-        <TextBox x:Name="txtQuantità" HorizontalAlignment="Left" Height="23" Margin="319,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblTotale" Content="Totale" HorizontalAlignment="Left" Margin="279,146,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label x:Name="lblSconto" Content="Sconto percentuale" HorizontalAlignment="Left" Margin="505,56,0,0" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="txtSconto" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="505,82,0,0"/>
+    <Grid OpacityMask="#FF682F2F">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="Red"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Prezzo"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,56,0,0" Background="#FFF30000" Foreground="White"/>
+        <TextBox x:Name="txtPrezzo" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="80,82,0,0" Background="Black" Foreground="White"/>
+        <Button x:Name="btnMostra" Content="Calcola" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="316,121,0,0" Click="btnMostra_Click" Background="#FFF30000" Foreground="White"/>
+        <Label x:Name="lblStampa" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="361,146,0,0" Width="241" Foreground="White"/>
+        <Label x:Name="lblQuantità" Content="Quantità" HorizontalAlignment="Left" Margin="319,56,0,0" VerticalAlignment="Top" Width="72" Background="#FFF30000" Foreground="White"/>
+        <TextBox x:Name="txtQuantità" HorizontalAlignment="Left" Height="23" Margin="319,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Black" Foreground="White"/>
+        <Label x:Name="lblTotale" Content="Totale" HorizontalAlignment="Left" Margin="279,146,0,0" VerticalAlignment="Top" Width="65" Background="#FFF30000" Foreground="White"/>
+        <Label x:Name="lblSconto" Content="Sconto percentuale" HorizontalAlignment="Left" Margin="505,56,0,0" VerticalAlignment="Top" Width="123" Background="Red" Foreground="White"/>
+        <TextBox x:Name="txtSconto" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="505,82,0,0" Background="Black" Foreground="White"/>
 
 
     </Grid>
